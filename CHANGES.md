@@ -1,3 +1,7 @@
+#### [v4.9.3]
+> Jun 9, 2024
+- Fix for the "too many requests" issue
+
 #### [v4.9.0]
 > Feb 2, 2019
 - Adds support for a single keyword string with an array of geo locations

@@ -1,4 +1,4 @@
-# google-trends-api
+# google-trends-api-code
 
 [![NPM](https://nodei.co/npm/google-trends-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/google-trends-api/)
 
@@ -17,7 +17,7 @@ This library provides an API layer to [google trends](https://www.google.com/tre
 
 ### Syntax
 ```js
-const googleTrends = require('google-trends-api');
+const googleTrends = require('google-trends-api-code');
 
 googleTrends.apiMethod(optionsObject, [callback])
 ```
@@ -70,7 +70,7 @@ npm install google-trends-api
 Require google-trends-api in your script and give it a variable name:
 
 ```js
-const googleTrends = require('google-trends-api');
+const googleTrends = require('google-trends-api-code');
 ```
 
 You will now be able to access methods on `googleTrends`.  See the [API Methods section](#api-methods) below to see the methods available and their syntax.

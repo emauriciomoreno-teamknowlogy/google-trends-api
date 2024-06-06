@@ -1,5 +1,5 @@
 {
-  "name": "google-trends-api",
+  "name": "google-trends-api-code",
   "version": "4.9.2",
   "description": "an API layer on top of google trends",
   "main": "lib/google-trends-api.min.js",
@@ -22,7 +22,7 @@
   "pre-commit": "lint:staged",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pat310/google-trends-api.git"
+    "url": "git+https://github.com/emauriciomoreno-teamknowlogy/google-trends-api.git"
   },
   "keywords": [
     "google",
@@ -32,15 +32,15 @@
     "search",
     "google-trends"
   ],
-  "author": "Patrick Trasborg <patrick.trasborg@gmail.com> (http://trasb.org)",
+  "author": "Erik Moreno <erik@teamknowlogy.com> (http://teamknowlogy.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pat310/google-trends-api/issues"
+    "url": "https://github.com/emauriciomoreno-teamknowlogy/google-trends-api.git/issues"
   },
   "files": [
     "src/*"
   ],
-  "homepage": "https://github.com/pat310/google-trends-api#readme",
+  "homepage": "https://github.com/emauriciomoreno-teamknowlogy/google-trends-api.git#readme",
   "dependencies": {},
   "devDependencies": {
     "babel": "6.3.13",

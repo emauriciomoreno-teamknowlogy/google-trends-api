@@ -204,32 +204,33 @@ export function getInterestResults(request) {
   return (searchType, obj) => {
     const map = {
       'Auto complete': {
-        path: `/trends/api/autocomplete/${encodeURIComponent(obj.keyword)}`,
+        path:
+        `/login/trends/api/autocomplete/${encodeURIComponent(obj.keyword)}`,
       },
       'Interest over time': {
-        path: '/trends/api/widgetdata/multiline',
+        path: '/login/trends/api/widgetdata/multiline',
         _id: 'TIMESERIES',
       },
       'Interest by region': {
-        path: '/trends/api/widgetdata/comparedgeo',
+        path: '/login/trends/api/widgetdata/comparedgeo',
         resolution: formatResolution(obj.resolution),
         _id: 'GEO_MAP',
       },
       'Related topics': {
-        path: '/trends/api/widgetdata/relatedsearches',
+        path: '/login/trends/api/widgetdata/relatedsearches',
         _id: 'RELATED_TOPICS',
       },
       'Related queries': {
-        path: '/trends/api/widgetdata/relatedsearches',
+        path: '/login/trends/api/widgetdata/relatedsearches',
         _id: 'RELATED_QUERIES',
       },
     };
 
     const options = {
       method: 'GET',
-      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com/login',
+      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
       // host: 'trends.google.com',
-      path: '/trends/api/explore',
+      path: '/login/trends/api/explore',
       qs: {
         hl: obj.hl,
         req: JSON.stringify({
@@ -311,14 +312,14 @@ export function getTrendingResults(request) {
   return (searchType, obj) => {
     const searchTypeMap = {
       'Daily trends': {
-        path: '/trends/api/dailytrends',
+        path: '/login/trends/api/dailytrends',
         extraParams: {
           ed: convertDateToString(obj.trendDate, false, true),
           ns: obj.ns,
         },
       },
       'Real time trends': {
-        path: '/trends/api/realtimetrends',
+        path: '/login/trends/api/realtimetrends',
         extraParams: {
           fi: 0,
           fs: 0,
@@ -331,7 +332,7 @@ export function getTrendingResults(request) {
 
     const options = {
       method: 'GET',
-      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com/login',
+      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
       // host: 'trends.google.com',
       path: searchTypeMap[searchType].path,
       qs: {

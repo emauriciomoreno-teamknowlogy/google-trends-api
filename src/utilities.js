@@ -280,7 +280,7 @@ export function getInterestResults(request) {
       const nextOptions = {
         path,
         method: 'GET',
-        host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com/login',
+        host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
         // host: 'trends.google.com',
         qs: {
           hl: obj.hl,

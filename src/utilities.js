@@ -204,33 +204,32 @@ export function getInterestResults(request) {
   return (searchType, obj) => {
     const map = {
       'Auto complete': {
-        path:
-        `/login/trends/api/autocomplete/${encodeURIComponent(obj.keyword)}`,
+        path: `/trends/api/autocomplete/${encodeURIComponent(obj.keyword)}`,
       },
       'Interest over time': {
-        path: '/login/trends/api/widgetdata/multiline',
+        path: '/trends/api/widgetdata/multiline',
         _id: 'TIMESERIES',
       },
       'Interest by region': {
-        path: '/login/trends/api/widgetdata/comparedgeo',
+        path: '/trends/api/widgetdata/comparedgeo',
         resolution: formatResolution(obj.resolution),
         _id: 'GEO_MAP',
       },
       'Related topics': {
-        path: '/login/trends/api/widgetdata/relatedsearches',
+        path: '/trends/api/widgetdata/relatedsearches',
         _id: 'RELATED_TOPICS',
       },
       'Related queries': {
-        path: '/login/trends/api/widgetdata/relatedsearches',
+        path: '/trends/api/widgetdata/relatedsearches',
         _id: 'RELATED_QUERIES',
       },
     };
 
     const options = {
       method: 'GET',
-      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
+      host: 'trends-apigw.squintboard-dev.com',
       // host: 'trends.google.com',
-      path: '/login/trends/api/explore',
+      path: '/trends/api/explore',
       qs: {
         hl: obj.hl,
         req: JSON.stringify({
@@ -280,7 +279,7 @@ export function getInterestResults(request) {
       const nextOptions = {
         path,
         method: 'GET',
-        host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
+        host: 'trends-apigw.squintboard-dev.com',
         // host: 'trends.google.com',
         qs: {
           hl: obj.hl,
@@ -312,14 +311,14 @@ export function getTrendingResults(request) {
   return (searchType, obj) => {
     const searchTypeMap = {
       'Daily trends': {
-        path: '/login/trends/api/dailytrends',
+        path: '/trends/api/dailytrends',
         extraParams: {
           ed: convertDateToString(obj.trendDate, false, true),
           ns: obj.ns,
         },
       },
       'Real time trends': {
-        path: '/login/trends/api/realtimetrends',
+        path: '/trends/api/realtimetrends',
         extraParams: {
           fi: 0,
           fs: 0,
@@ -332,7 +331,7 @@ export function getTrendingResults(request) {
 
     const options = {
       method: 'GET',
-      host: 'z9vyx8l0mg.execute-api.us-east-1.amazonaws.com',
+      host: 'trends-apigw.squintboard-dev.com',
       // host: 'trends.google.com',
       path: searchTypeMap[searchType].path,
       qs: {

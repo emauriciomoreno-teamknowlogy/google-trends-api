@@ -227,8 +227,7 @@ export function getInterestResults(request) {
 
     const options = {
       method: 'GET',
-      host: 'trends-apigw.squintboard-dev.com',
-      // host: 'trends.google.com',
+      host: 'trends.google.com',
       path: '/trends/api/explore',
       qs: {
         hl: obj.hl,
@@ -279,8 +278,7 @@ export function getInterestResults(request) {
       const nextOptions = {
         path,
         method: 'GET',
-        host: 'trends-apigw.squintboard-dev.com',
-        // host: 'trends.google.com',
+        host: 'trends.google.com',
         qs: {
           hl: obj.hl,
           req,
@@ -331,8 +329,7 @@ export function getTrendingResults(request) {
 
     const options = {
       method: 'GET',
-      host: 'trends-apigw.squintboard-dev.com',
-      // host: 'trends.google.com',
+      host: 'trends.google.com',
       path: searchTypeMap[searchType].path,
       qs: {
         hl: obj.hl,
